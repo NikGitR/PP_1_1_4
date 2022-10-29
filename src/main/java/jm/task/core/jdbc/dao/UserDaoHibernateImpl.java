@@ -18,7 +18,6 @@ public class UserDaoHibernateImpl implements UserDao {
 
     }
 
-
     @Override
     public void createUsersTable() {
         String sql = "CREATE TABLE IF NOT EXISTS users" +
@@ -57,9 +56,7 @@ public class UserDaoHibernateImpl implements UserDao {
         } catch (HibernateException e) {
             transaction.rollback();
             e.printStackTrace();
-
         }
-
     }
 
     public void removeUserById(long id) {
@@ -70,9 +67,7 @@ public class UserDaoHibernateImpl implements UserDao {
         } catch (HibernateException e) {
             transaction.rollback();
             e.printStackTrace();
-
         }
-
     }
 
     public List<User> getAllUsers() {
@@ -96,9 +91,7 @@ public class UserDaoHibernateImpl implements UserDao {
         } catch (HibernateException e) {
             transaction.rollback();
             e.printStackTrace();
-
         }
-
     }
 }
 
